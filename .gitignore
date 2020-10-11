@@ -1,6 +1,7 @@
 # Dirs
 .vs/
 bin/
+obj/
 
 # Logs
 logs
