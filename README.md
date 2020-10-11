@@ -14,7 +14,7 @@ In your application you have different entities to store in Lists, you also want
 
 # Usage
 
-1. Define a model, and implement IDBIdentity
+1. Define a model and implement IDBIdentity
 
 ```c#
   class UserModel:IDBIdentity
