@@ -29,7 +29,11 @@ In your application you have different entities to store in Lists, you also want
 
 ```c#
   var db = new StorageClient();
-  Storage.JSONStringToDB("[]");
+  Storage.JSONStringToDB("[]"); // load state of Store from a json
+```
+
+```c#
+string jsonData = Storage.DBtoJSONString() // get serialized state of Store
 ```
 
 3. Add object to Store
