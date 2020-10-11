@@ -1,0 +1,9 @@
+E:\@SkyDrive\SkyDrive\@backup\vsDEV\SimpleDataStorage\SimpleDataStorage\bin\Debug\netstandard2.0\SimpleDataStorage.deps.json
+E:\@SkyDrive\SkyDrive\@backup\vsDEV\SimpleDataStorage\SimpleDataStorage\bin\Debug\netstandard2.0\SimpleDataStorage.dll
+E:\@SkyDrive\SkyDrive\@backup\vsDEV\SimpleDataStorage\SimpleDataStorage\obj\Debug\netstandard2.0\SimpleDataStorage.csprojAssemblyReference.cache
+E:\@SkyDrive\SkyDrive\@backup\vsDEV\SimpleDataStorage\SimpleDataStorage\obj\Debug\netstandard2.0\SimpleDataStorage.AssemblyInfoInputs.cache
+E:\@SkyDrive\SkyDrive\@backup\vsDEV\SimpleDataStorage\SimpleDataStorage\obj\Debug\netstandard2.0\SimpleDataStorage.AssemblyInfo.cs
+E:\@SkyDrive\SkyDrive\@backup\vsDEV\SimpleDataStorage\SimpleDataStorage\bin\Debug\netstandard2.0\SimpleDataStorage.pdb
+E:\@SkyDrive\SkyDrive\@backup\vsDEV\SimpleDataStorage\SimpleDataStorage\obj\Debug\netstandard2.0\SimpleDataStorage.dll
+E:\@SkyDrive\SkyDrive\@backup\vsDEV\SimpleDataStorage\SimpleDataStorage\obj\Debug\netstandard2.0\SimpleDataStorage.pdb
+E:\@SkyDrive\SkyDrive\@backup\vsDEV\SimpleDataStorage\SimpleDataStorage\obj\Debug\netstandard2.0\SimpleDataStorage.csproj.CoreCompileInputs.cache
