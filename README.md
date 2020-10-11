@@ -1,7 +1,9 @@
 # SimpleDataStorage
 
 C# data storage based on Lists<YourType>
+
 Can store data as Lists<YourType>, can have many Lists and creates them on fly.
+
 Can return serialized state to save and restore its state.
 
 # Not for production
