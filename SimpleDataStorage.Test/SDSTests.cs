@@ -40,7 +40,7 @@ namespace SimpleDataStorage.Test
                     lst.Add(new UserModel() { Name = "test", Pwd = "testpwd" });
                 }
                 lst.AsParallel().ForAll(x => { id = db.Add<UserModel>(x); x.Id = id; });
-                lst.Select(x => new UserModel() { Id = x.Id }).AsParallel().ForAll(x => db.Delete<UserModel>(x));
+                lst.Select(x => new UserModel() { Id = x.Id }).AsParallel().ForAll(x => db.Delete<UserModel>(x.Id));
                 int cnt = db.Get<UserModel>().Count;
 
                 Assert.Equal(0, cnt);
@@ -172,6 +172,27 @@ namespace SimpleDataStorage.Test
 
                 Assert.Equal("test", db.Get<UserModel>(idu).Name);
                 Assert.Equal("test2", db.Get<UserModel2>(idu2).Name2);
+            }
+        }
+        [Fact]
+        public void AddDeleteEntity()
+        {
+            lock (storageLock)
+            {
+                var db = new StorageClient();
+                Storage.JSONStringToDB("[]");
+                int id = db.Add<UserModel>(new UserModel() { Name = "test", Pwd = "testpwd" });
+                int id2 = db.Add<UserModel>(new UserModel() { Name = "test2", Pwd = "testpwd2" });
+
+                Assert.Equal(2, db.Get<UserModel>().Count);
+
+                db.Delete<UserModel>(id);
+
+                Assert.Equal("test2", db.Get<UserModel>(id2).Name);
+
+                db.Delete<UserModel>(id2);
+                
+                Assert.Equal(0, db.Get<UserModel>().Count);
             }
         }
     }

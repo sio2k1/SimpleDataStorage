@@ -6,6 +6,8 @@ using System.Text;
 
 namespace SimpleDataStorage
 {
+
+
     public class StorageClient : IDataBaseLayer
     {
         static readonly object idGenLock = new object();
@@ -23,18 +25,14 @@ namespace SimpleDataStorage
             }
             return storage.Find(x => x.Id == entity.Id).Id;
         }
-        public bool Delete<T>(IDBIdentity entity) where T : IDBIdentity
+        public bool Delete<T>(int id) where T : IDBIdentity
         {
-            if (!typeof(T).IsAssignableFrom(entity.GetType()))
-            {
-                throw new NotSupportedException("The entity has a wrong type");
-            }
             List<T> storage = Storage.GetList<T>();
             bool res = false;
             lock (idGenLock)
             {
-                storage.RemoveAll(x => x.Id == entity.Id);
-                res = !storage.Any(x => x.Id == entity.Id);
+                storage.RemoveAll(x => x.Id == id);
+                res = !storage.Any(x => x.Id == id);
             }
             return res;
         }
@@ -60,7 +58,8 @@ namespace SimpleDataStorage
                 T t = Activator.CreateInstance<T>();
                 t.Id = 0;
                 return t;
-            } else
+            }
+            else
                 return res;
         }
     }
