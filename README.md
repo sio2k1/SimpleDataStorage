@@ -33,7 +33,7 @@ In your application you have different entities to store in Lists, you also want
 ```
 
 ```c#
-string jsonData = Storage.DBtoJSONString() // get serialized state of Store
+  string jsonData = Storage.DBtoJSONString() // get serialized state of Store
 ```
 
 3. Add object to Store
