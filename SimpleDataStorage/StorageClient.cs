@@ -6,8 +6,6 @@ using System.Text;
 
 namespace SimpleDataStorage
 {
-
-
     public class StorageClient : IDataBaseLayer
     {
         static readonly object idGenLock = new object();

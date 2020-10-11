@@ -11,7 +11,6 @@ namespace SimpleDataStorage
         static Func<DataEntry, Type, bool> typeNameComparer = (d, t) => d.TypeFullName == t.FullName;
         public static string DBtoJSONString()
         {
-
             var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
             return JsonConvert.SerializeObject(db, settings);
         }
@@ -19,8 +18,6 @@ namespace SimpleDataStorage
         {
             var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
             db = JsonConvert.DeserializeObject<List<DataEntry>>(JSON, settings); 
-
-
         }
         public static List<T> GetList<T>() where T : IDBIdentity
         {
