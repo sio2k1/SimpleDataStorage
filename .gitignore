@@ -1,5 +1,7 @@
+# Dirs
 .vs/
 bin/
+
 # Logs
 logs
 *.log
